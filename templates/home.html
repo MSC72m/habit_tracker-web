@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+
+</head>
+<body>
+    <h1>Welcome to Habit Tracker Web App</h1>
+    <a href="{{ url_for('add_habit_form') }}">Add New Habit</a>
+    <ul>
+        {% for habit in habits %}
+        <li>
+            {{ habit.name }} - Streak: {{ habit.streak }}
+            <form method="POST" action="{{ url_for('complete_habit') }}">
+                <input type="hidden" name="habit_id" value="{{ habit.id }}">
+                <button type="submit">Complete Habit</button>
+            </form>
+            <form method="POST" action="{{ url_for('remove_habit') }}" >
+                <input type="hidden" name="habit_id" value="{{ habit.id }}">
+                <button type="submit">remove Habit</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
