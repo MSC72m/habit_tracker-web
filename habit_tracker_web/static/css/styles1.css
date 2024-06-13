@@ -1,0 +1,65 @@
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #343a40; /* Updated text color for better contrast */
+    background-color: #e9ecef; /* Light gray background for a modern, neutral look */
+    padding: 20px;
+}
+
+form {
+    background: #ffffff;
+    padding: 40px;
+    border: 1px solid #dee2e6; /* Lighter border color for a more refined look */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adding subtle shadow for depth */
+    margin: 40px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px; /* Slightly reduced for better form balance */
+}
+
+input[type="text"] {
+    width: 100%; /* Adjusted to handle padding correctly */
+    padding: 12px; /* Larger padding for a more touch-friendly design */
+    margin-bottom: 20px;
+    border: 1px solid #ced4da; /* Lighter border for inputs */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #17a2b8; /* Consistent button color with the rest of the design */
+    color: white;
+    border: none;
+    padding: 14px 20px; /* Larger padding for a more substantial button */
+    font-size: 18px; /* Larger font size for readability */
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%; /* Full-width buttons for a modern look */
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for interactive feedback */
+}
+
+button:hover {
+    background-color: #138496; /* Darker shade for hover */
+    transform: scale(1.05); /* Slight scale to indicate interactivity */
+}
+
+div {
+    background-color: #fff3cd; /* Softer yellow for less visual strain */
+    color: #856404; /* Complementary text color for better readability */
+    padding: 15px; /* Increased padding for better content spacing */
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Consistent use of shadows */
+}

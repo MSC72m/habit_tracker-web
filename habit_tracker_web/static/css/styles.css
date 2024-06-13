@@ -1,0 +1,122 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    color: #343a40;
+    line-height: 1.6;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e9ecef;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: #495057;
+}
+
+/* Link Styles */
+a {
+    display: inline-block;
+    background: #17a2b8;
+    color: white;
+    padding: 20px 28px;
+    border-radius: 9px;
+    text-decoration: goldenrod;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+a:hover, a:focus {
+    background-color: #138496;
+    transform: scale(1.1);
+}
+
+/* List and Item Styles */
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px;
+    justify-content: space-around;
+}
+
+li {
+    flex: 1 0 30%; /* Adjust to 30% to ensure maximum 3 items per row */
+    max-width: calc(100% / 3 - 20px); /* Adjust max-width for consistent sizing */
+    background: #fff;
+    border: 2px solid #dee2e6;
+    padding: 21px;
+    margin: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    min-width: 340px; /* Prevent the list items from becoming too narrow */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items */
+    gap: 10px; /* Add space between items */
+}
+
+li:hover {
+    transform: translateY(-5px);
+}
+
+/* Button Styles */
+button {
+    background: #28a745;
+    color: white;
+    border: 8.5px;
+    padding: 18px 26px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display:-ms-flexbox;
+    margin-bottom: 7px;
+
+    min-width: 240px;  /* Adjust width as needed */
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden; /* Keeps text within the button */
+    text-overflow: ellipsis; /* Adds ellipsis if text overflows */
+    
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+button:not(:last-child) {
+    margin-bottom: 8px; /* Add margin to the bottom of each button except the last one */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    ul {
+        flex-direction: column;
+    }
+    li {
+        padding: 5px;
+        min-width: 150px; /* Adjust minimum width for smaller screens */
+        flex-basis: 100%; /* Full width but maintaining the max-width restriction */
+    }
+    button {
+        padding: 8px 10px; /* Smaller padding */
+        font-size: 0.8rem; /* Smaller font size */
+    }
+}
