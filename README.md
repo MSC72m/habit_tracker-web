@@ -39,7 +39,7 @@ Template: add_habit.html
  Marks a habit as completed, incrementing its streak count.
 ### Remove Habit Route (/remove_habit)
 Method: POST
-### Removes a habit from the list based on its ID.
+Removes a habit from the list based on its ID.
 ## Code Explanation
 Importing Libraries
 ```python
